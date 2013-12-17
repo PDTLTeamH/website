@@ -1,0 +1,24 @@
+language:
+  - node_js
+
+python:
+  - "2.7"
+
+before_install:
+  - ./travis/before_script.sh
+
+script:
+  - cp -r src dist
+
+after_success:
+  # Only deploy from one of the builds
+  - ./travis/deploy.sh --verbose
+
+env:
+  global:
+
+    # GitHub access token that grants access to thusoys GitHub account
+    - secure: "rbuepC6gnfRxQeGLAUyMFDeysczlSFPVZPxZcSni//Cb8mlZ7W8Wa6qhk3uF5k6W2DsGSTurTruA0OJbXdmMfYxb6ZsFnl1vDIcT7ZBt9rmJQhjHpf0yN7jdugVCPb2sGysM2LS2+WTYe10iSr1hPkpvIps6k8J0hdQXA8tX2kM="
+
+notifications:
+  email: false
