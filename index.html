@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Our website</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="msg">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="container">
+        <h1>Our website</h1>
+
+        <p>
+            Content will appear here.
+        </p>
+
+    </div>
+
+    <script>
+        (function(t,h,u,s,o,y){t.GoogleAnalyticsObject=s;t[s]||(t[s]=
+        function(){(t[s].q=t[s].q||[]).push(arguments)});t[s].s=+new Date;
+        o=h.createElement(u);y=h.getElementsByTagName(u)[0];
+        o.src='//www.google-analytics.com/analytics.js';o.async=true;
+        y.parentNode.insertBefore(o,y)}(window,document,'script','ga'));
+        ga('create','{{ config["GOOGLE_ANALYTICS_ID"] }}');ga('send','pageview');
+    </script>
+
+</body>
+</html>
