@@ -1,5 +1,4 @@
 language:
-  - python
   - node_js
 
 python:
@@ -9,7 +8,7 @@ before_install:
   - ./travis/before_script.sh
 
 script:
-  - cp src dist
+  - cp -r src dist
 
 after_success:
   # Only deploy from one of the builds
