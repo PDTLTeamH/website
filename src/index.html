@@ -9,20 +9,135 @@
     <title>Our website</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="first.css" media="screen" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<style type="text/css">
+#goals {
+color : Black ;
+text-align : left ;
+position:absolute;
+left:50px;
+top:640px;
+width : 600px ;
+
+
+}
+h3 {
+color : RED ;
+text-align : left ;
+position:absolute;
+left:50px;
+top:470px;
+
+}
+p {
+color : Black ;
+text-align : left ;
+position:absolute;
+left:50px;
+top:500px;
+width : 600px ;}
+h1 {
+color : BLUE ;
+text-align : center ; 
+position:absolute;
+left:300px;
+top:50px;
+}
+#logo {
+position:absolute;
+left:50px;
+top:50px;
+}
+#bigone {
+position:absolute;
+left:10px;
+top:140px;
+}
+</style>
 </head>
 <body>
-    <!--[if lt IE 7]>
-        <p class="msg">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<img id="logo" src="Logo.png" width="130" height="100">
+<h1> how to survive in a digital world ?</h1>
+ <ul id="Menu">
+    <li><a href="#">home</a></li>
+    <li><a href="#">privacy issues</a></li>
+    <li>
+        <a href="#">guidelines</a>
+        <ul class="noJS">
+            <li><a href="#">facebook</a></li>
+            <li><a href="#">twitter</a></li>
+            <li><a href="#">you tube</a></li>
+        </ul>
+    </li>
+    <li><a href="#">chocking news</a></li>
+    <li><a href="#">contact us </a></li>
+</ul>
+<script>
+$(function(){
+    $('#coolMenu').find('> li').hover(function(){
+        $(this).find('ul')
+        .removeClass('noJS')
+        .stop(true, true).slideToggle('fast');
+    });
+});
+</script>
+ <script type="text/javascript">
 
-    <div class="container">
-        <h1>Our website</h1>
+  function ShowEffect(element){
+       new Effect.Appear(element, 
+       {duration:1, from:0, to:1.0});
+   }
+    function FadeEffect(element){
+       new Effect.Fade(element,
+       {duration:1, from:1.0, to:0});
+   }
+   
+var i = 0;
+var path = new Array();
+ 
+// LIST OF IMAGES
+path[0] = "image1.jpg";
+path[1] = "image2.png";
+path[2] = "image3.jpg";
 
-        <p>
-            Content will appear here.
-        </p>
+function swapImage_0()
+{
+   document.slide.src = path[i];
+   if(i < path.length - 1) i++; else i = 0;
+ 
+ setTimeout("FadeEffect('hideshow')",5000);
 
-    </div>
+setTimeout("ShowEffect('hideshow')",5000);
+
+ setTimeout("swapImage_0()",5000);
+ 
+ 
+}
+window.onload=swapImage_0;
+
+</script>
+
+<div id="hideshow">
+
+<img id="bigone" height="300" name="slide" src="/image1.jpg" width="1000" />
+
+</div>
+<h3> Our goals </h3>
+<p>
+We want to raise privacy awareness among the general population. Today, most people seem to have an unconditional faith in the every free service encountered, with the exception of security industry professionals. We want to educate people about the risks of sharing personal data in the Internet, and how to enjoy the benefits of social media while minimizing the risk of exploitation.
+
+We want to provide:
+
+</p>
+<ul id="goals">
+	<li>  Resources people can look to for help on how to avoid being exploited. </li>
+	<li> Sharing guidelines for social media.  </li>
+	<li> Technical guidelines for companies wanting the benefits of big data without abusing users trust. <br><br><br><br><br><br> <br><br><br>  </li>
+
+</ul>
+
+
 
     <script>
         (function(t,h,u,s,o,y){t.GoogleAnalyticsObject=s;t[s]||(t[s]=
